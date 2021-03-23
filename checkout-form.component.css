@@ -1,0 +1,21 @@
+.sth {background-image: url(spacetreehelmet.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: red;
+    font-size: 1.2em;
+    background-color: purple;
+}
+
+.bc {background-color: rgb(245,245,245, 0.8);
+    font:  Courier, monospace;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #33FF45 ; 
+}
+
+body{
+    background-color: black;
+}
+
+.calign {text-align: center;}

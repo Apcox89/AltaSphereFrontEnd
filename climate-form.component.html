@@ -1,0 +1,162 @@
+<head>
+        <meta charset="utf-8">
+    
+        <title> The Co-op Initiative </title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="climate-form.component.css">
+
+        <!--Script for the Co-Op Subscription Component of the page -->
+        <script src="formcomponent.js"></script>
+
+        <!-- 1st script page to link page forms for, so Co-Op Page can print/output 
+            on the Check-out Page-->
+        <script src="pageformpipe1.js"></script>
+    
+    </head>
+<body>
+        <div class="container">
+                <div class="row">
+                    <div class="table table-responsive">
+                                <tr>
+                                    <div class="custom-container jumbotron sth">
+                                        <h1 class="font-bold text-danger"> AltaSphere </h1>
+                                        <h5 class="font-italic text-danger"> A Cli-Fi Hub</h5>
+                                        <h6 class="font-italic text-danger"> For Our Earth</h6>
+                                </tr>
+                                <tr>
+                                    <div class="row custom-row">
+                                        <nav class="navbar navbar-expand-md navbar-light">
+                                            <button class="navbar-toggler" type="button" 
+                                                data-toggle="collapse" data-target="#divid">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <div class="divid"class="collapse navbar-collapse">
+                                                <ul class="navbar-nav">
+                                                    <li class="nav-item">
+                                                        <button type="button" class="btn btn-md btn-dark bc"
+                                                            href="altasphere.html">
+                                                            <a class="navlink text-danger" href="altasphere.html">
+                                                                Home
+                                                            </a>
+                                                        </button>
+                                                    </li>
+                                                    &nbsp;
+                                                    <li class="nav-item">
+                                                        <button type="button" class="btn btn-md btn-dark bc"
+                                                            href="aboutus.html">
+                                                            <a class="navlink text-danger" href="aboutus.html">
+                                                                About Us
+                                                            </a>
+                                                        </button>
+                                                    </li>
+                                                    &nbsp;
+                                                    <li class="nav-item">
+                                                        <button type="button" class="btn btn-md btn-dark bc"
+                                                                href="climate-form.component.html">
+                                                            <a class="navlink text-danger" 
+                                                                href="climate-form.component.html">
+                                                                The Co-op
+                                                            </a>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </tr>
+                        </div>
+                    </div>
+            </div>
+<div class="row custom-row">
+    <div class="col-sm-5 custom-container jumbotron bc">
+        <form class="form-horizontal text-dark font-weight-bold" method="GET" onSubmit="return validateform(this);">
+            <fieldset>
+                <legend> Climate Change Co-op Subscribe </legend>
+                    <!-- Person Name Block-->
+                    <div class="form-group">
+                        <label for="membername">Member Name: </label>
+                        <br/>
+                        <input name="membername" type="text" id="membername" placeholder=" First, Last ">
+                                <h6>(Please enter your full name)</h6>
+                    </div>
+                    <!--Email Block-->
+                    <div class="form-group">
+                        <label for="useremail">Email: </label>
+                        <br/>
+                        <input name="useremail" type="text" id="useremail"
+                            placeholder="Preferred Email">
+                               <h6> (Valid Email is required to subscribe) </h6>
+                    </div>
+                    <!--Membership Type List Block-->
+                    <div class="form-group">
+                        <label for="ddselect"> Subscription Select: </label>
+                        <h6> (Select none if only donating) </h6>
+                        <select id="ddselect">
+                            <option value="0na"> none </option>
+                            <option value="1mo"> Trial</option>
+                            <option value="3mo"> Select</option>
+                            <option value="1yr"> Annual </option>
+                        </select>
+                    </div>
+                    <!-- Media Experience Text Block 
+                        This area for="mediareposit" could be a data allocation function to a server where
+                        "mediareposit" info for each new subscriber allows curators on the editorial team 
+                        to customize the content for that user based upon info submitted in the text box. 
+                    -->
+                    <div class="form-group">
+                        <label for="mediareposit"> Favorite Sci-Fi moment: </label>
+                        <br/>
+                        <textarea id="mediarespoit" placeholder="Customize that media experience"></textarea>
+                    </div>
+                    <!--Donate Option Number Block-->
+                    <div class="form-group">
+                        <label for="donateoption"> Option to Donate: </label>
+                        <h6> (Pitch-in with or w/o a Subscripton)</h6>
+                        <input type="number" id="donateoption" placeholder="$">
+                                <br/>
+                               <h6> (Hit Submit for the Check-Out page) </h6>
+                    </div>
+                    <!--Buttons Blocks-->
+                    <div class="form-group">
+                        <button for="submit" type="submit" value="Submit" 
+                            class="btn btn-primary" href="checkout-form.component.html"> 
+                            <a name="submit" class="text-white" href="checkout-form.component.html">
+                                 Submit </a>
+                        </button>
+                        &nbsp;
+                        <button type="reset" class="btn btn-default">
+                            Cancel
+                        </button>
+                    </div>
+                    <div class="form-group">
+                            <img src="paypal-logo.png" class="picrs">
+                    </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="col custom-col">
+        <h4 class="text-white"> Save your planet, help your fellow human, <br/>and the cosmos will thank you! </h4>
+        <video width="430px" controls autoplay muted loop src="rainbownebula.mp4">
+                Your video does not support the <code> video </code> element
+          </video>
+          <div class="imgbreath" id="breathing-img">
+                <h5 class=>~~~~ AltaSphere ~~~~<br/></h5>
+                <h6>(Giving technology a heart) </h6>
+               <img src="daniel_hertzberg_ai.jpg">
+         </div>
+         <script src="heartbeat.js"></script>
+    </div>
+</div>
+
+<div class="calign container custom-container font-weight-bold text-danger"> 
+		&copy; A.Cox 8.15.19
+</div>
+
+</body>

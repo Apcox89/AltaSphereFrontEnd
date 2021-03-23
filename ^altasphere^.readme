@@ -1,0 +1,27 @@
+A.Cox 
+
+Website Overview:
+ < Company: AltaSphere - Slogan: "A Cli-Fi Hub ~ for our Earth " >
+
+	AltaSphere is a concept for a Subscription based newsletter/sci-fi e-zine. The company's core mission is to help agents for climate-change to reduce the carbon footprint, by donating 50% of the user subscription fee to those efforts. In return the user gets customizable sci-fi content - rare nostalgia, modern sci-fi media, and a curated media selection delivered directly to their mailbox + AltaSphere the Application for iOS/Android (Coming Soon!). 
+
+Site Structure: 
+
+pg1 - AltaSphere Home Page Landing
+	link: <altasphere.html>
+pg2 - AboutUs Page
+	link: <aboutus.html>
+pg3 - Co-Op Subscribe page
+	link: <climate-form.component.html>
+pg4 - Checkout/Complete Subscription page
+	link: <checkout-form.component.html>
+
+The site offers a simple platform for users to get curated media and exist as a sci-community-hub source for the most relative content in the genre. The AltaSphere applications is similar to - Medium, the Athletic. Simple reddit type platforms that people go to as sources for sports, lifestyle, technology, etc. This would be like that type of e-platform except with a sci-fi focus + a green footprint with the climate-change donation element to the site. 
+
+Technical: (HTML/CSS, JavaScript, jQuery, Canvas Animations)
+
+		The climate-form.component.html is to link through the checkout-form.component.html.
+	Piping the pages through one another using JS pageformpipe1.js to pageformpipe2.js allowing
+	the final batch of data to be processed before it hits the server. 
+
+Updated: 8.21.19

@@ -1,0 +1,178 @@
+SD723 (Front End Web-Design)
+
++Last Course DT due Sunday:
+
+Web development technologies are evolving all of the time.  While basic HTML, CSS and JavaScript remain stable with ongoing enhancements to their foundations, other technologies are  introduced on a fairly regular basis.  Identify one such enhancement or technology that was not covered in this course.
+
+One technology that a derivative of almost everything we learned in the Front-End-Web-Design  course is AJAX. It allows for browser functionality across pages, with forms, and corresponding the website data to a server/host. It does this with the combination of existing technologies - HTML, CSS, JavaScript,  XML, jSon , and it brings us to about the same point where the front-end framework meets the server side, like Angular. 
+
+The nice thing about AJAX is that it can allow a component of a page to be updated, like a form,without the need to refresh the entire HTML page in the browser. Basically, it allows for sections of a page to function without having to over-burden the HTML. This creates a more responsive design, in the sense that load times for a page will be  made more efficient, while certain elements of a page may remain static and individual components of that page can be updated. 
+
+
+AJAX primary means of intercommunicating between forms on pages and a server comes through using XML and JavaScript. It does this through the use of an XMLHttpRequest type object that sends updated data to a server, which the host-server then processes, and reposits the info sent back to the browser using JavaScript. XML is also unique in that it doesn't have any pre-defined tags for use like HTML. A programmer using XML has the flexibility to define tag names when, for example, a class of objects are being created that belong to a specific form group on a page.  
+
+It's similar to Angular in that it is about the limit where front-end design begins to meet the server-side or back-end framework. AJAX and Angular are both crucial aspects to understand in a User-Experience Design type of position in the field. Or, as a full-stack-engineer, these program frameworks could be a great implementation in the stage of data-processing where information meets the server. 
+
+Overall, it's crucial for someone focusing on front-end frameworks to understand the following aspects of design:
+1) The accessibility of a site's pages for the users.
+2) Pages function in a way that corresponds accordingly with the server.
+3) Flexibility in their approach to a page design in regards to - - the platform chosen for communicating with the server, what works for a company/team, and the adaptability of the chosen platform to remain up to date as new technology emerges. 
+
+Final Project notes/ideas/code drafts:
+
+What about an online magazine for sci-fi readers? - AltaSphere
+
+EarthShip Space - a climate change provoking e-zine dedicated to the world around us and the space above.
+
+A sci-fi haven with content for: movies, reading, and pop-scifi trivia. 
+
+How could I generate a scifi quiz or trivia carousel?
+
+Technical: Bootstrap Grid, CSS, HTML, jQuery
+- - - - - - - 
+Workleft:
+
+ 4 page structure:
+ Home
+ About Us
+ Coop
+ Checkout
+
+HomePage - almost finished - landing for AltaSphere 
+- - what if the square planetearth had a Canvas Animation?
+
+Page for ClimateChange Form (Co-op Page) - got that - needs re working for jQuery form validation
+ - Also, add a >>>> Checkbox ?<<< for subscription on this page, then have render at checkout on Submit hit
+ + dropdown selections work with JS to equate at checkout
+ + add canvas animation to heart of technology
+
+Page for Checkout (on Submit Btn from Coop-Page) will take the user to payment/subscribe.
+- - I need membername of previous page to be here, along with subscriptionselect or ddselect option
+ - - - Basically I need these functions to print from the Co-op page, to give me a total for the payment option. 
+  - - - - paymentOption needs a dropdown dependent upon the payment choice, that payment choice is reflected back to - - - - the total rendered at the bottom of the form before checkout
+
+Page landing for About-Us:
+- Page for Media, SubscribeInfo , BootStrap Carousel
+ - - sound clips and video ambience
+  - - describe what the subscription entails and if the user would like a trial for 1-week free!
+  - - - 
+
+  + jQuery plugin is going to a pulse for the Co-Op page Heartbeat animation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Main Focus moving forward: 
+
+JS in seperate file equates for both Coop/Checkout Page
+- JS form validation will go in its own src="filename.js" 
+   for form validation across both pages
+- pipes connect through form to JS to change a value, and upon checkout,  that value registers from page to page
+++ jQuery plugin
+
+Submit btn leads to check-out form which also has JS validation
+
+-- repository for membership selected output from formcomponent.js (co-op page) --
+
+href="checkout-form.component.html" - - Submit button disabled for debugging purposes
+
+drop down validation code draft 1:
+ var ddselect = cliform.ddselect.value;
+        var strUser = ddselect.options[ddselect.selectedIndex].value;
+       
+        if (ddselect.strUser[selectedIndex]==0)
+           {
+               alert ("Select none if only donating :-) ")
+                return (false)
+           }
+       
+        if (ddselect.strUser[selectedIndex]==1)
+           {
+               alert("1 Month Trial Choice")
+                return (false)
+           } 
+       
+        if (ddselect.strUser[selectedIndex]==2)
+           {
+               alert("3 Month Select Choice")
+           }
+       
+        if (ddselect.strUser[selectedIndex]==3)
+           {
+               alert(" 1-Year Annual Choice")
+           }
+
+
+
+Aside: (First Learning JS funny:
+			Oh no not Java the Script!);
+
+checkout-form.component page
+-- subscrption j-query plugin here
+
+climate-form.component page
+
+- - - - - - - - - - 
+
+extra: button here:
+img src="aiunknown.jpg
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finshing Stretch by Weds 8/21 at 5pm
+- - Canvas Image Animation on AltaSphere landing - almost finished
+- - Co-Op Page form, jQuery plugin Image animation - needs attention
+- - -  Co-Op Page Form write to Check-out Page form - debugging
+- - Co-Op Page Form needs a drop down for payment type and a write for total of order - re-doing form
+
+			<!--Canvas animation to get picture to bounce around the container-->
+				<canvas id="sqearthbounce" width="300" height="175" method="POST" onLoad="return imageAnimation(this);">
+					</canvas>
+
+Guidelines:
+
+Your web site project is to consist of at least four web pages (no more than six pages), and must follow these guidelines and requirements:
+
+Four pages are to use HTML5 and CSS3, and must be responsive, and mobile-first. Failure to do so must result in a loss of points. <10>
+
+At least one of the pages must use Bootstrap.<6>
+
+On one page, you must include an HTML form and Java script. This HTML form is to use Javascript for preprocessing and validation of the form information.  <7>
+ - - Co-op page and Checkout page
+
+All Javascript must be in an external file(s). <3>
+
+You must use external style sheets. You must use styles wherever possible – no unnecessary element attributes! <2>
+
+On one of the pages, you must include either a video clip that is rendered using the HTML5 <video> tag, or an audio track that is playable using the HTML5 <audio> tag. <5>
+
+On one of the pages, you are to include an animation OR a meaningful drawing on an HTML5 canvas. 
+The exact content is entirely up to you. <6>
+
+The content of the fourth page is entirely up to you. (points are part of first bullet point above)
+
+One of the pages (but not the form page) must use Javascript or jQuery to modify the page content dynamically.  The exact dynamic content alteration is entirely up to you. <4>
+
+Separately, one of your web pages is to use a jQuery plug-in, any plug-in not previously used in class or in a homework assignment. You will need to explain how you were required to use it – HTML and CSS setup requirements, jQuery code and parameters, etc.  This explanation should be placed in a Word document that is uploaded as part of your project zip file. <7>
+
+Your site should reflect all of the points made in class with regards to a "good site". The links should flow naturally and logically.  You should have some external links as well as internal links on your site.  
+
+Your project is to be your own work!  If you do find material on the web that proves helpful to you, you may use it as long as you give credit to the "creator" of the material, and keep it to a minimum in accordance with the guidelines outlined above.
+
+
+Canvas Image text:
+
+<canvas id="myCanvas" width="350" height="300" class='outlinec'>
+				</canvas>
+			<script>
+				var canvas = document.getElementById('myCanvas');
+				var context = canvas.getContext('2d');
+				var imageObj = new Image();
+
+				var captionString ="How'd that happen?!";
+				context.font = "bold italic 20px Helvetica";
+				context.fillStyle="rgb(250,250,250)";
+				context.fillText(captionString, 20, 15);
+				imageObj.onLoad = function(){
+					context.drawImage(imageObj, 15, 20);
+				};
+				imageObj.src ='sqearthview.jpg';
+				// add pic ref from website
+			</script>

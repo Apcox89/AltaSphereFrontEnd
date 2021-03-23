@@ -1,0 +1,144 @@
+<html>
+ <head>
+                <meta charset="utf-8">
+            
+                <title> Altasphere: Subscribe </title>
+                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            
+                <link rel="stylesheet" href="checkout-form.component.css">
+
+                <script src="formfincomponent.js"></script>
+
+                <script src="formcomponent.js"></script>
+
+                <script src="pageformpipe2.js"></script>
+            
+ </head>
+ <body>
+                    <div class="container">
+                            <div class="row">
+                                <div class="table table-responsive">
+                                            <tr>
+                                                <div class="custom-container jumbotron sth">
+                                                    <h1 class="font-bold text-danger"> AltaSphere </h1>
+                                                    <h5 class="font-italic text-danger"> A Cli-Fi Hub</h5>
+                                                    <h6 class="font-italic text-danger"> For Our Earth</h6>
+                                            </tr>
+                                            <tr>
+                                                <div class="row custom-row">
+                                                    <nav class="navbar navbar-expand-md navbar-light">
+                                                        <button class="navbar-toggler" type="button" 
+                                                            data-toggle="collapse" data-target="#divid">
+                                                            <span class="navbar-toggler-icon"></span>
+                                                        </button>
+                                                        <div class="divid"class="collapse navbar-collapse">
+                                                            <ul class="navbar-nav">
+                                                                <li class="nav-item">
+                                                                    <button type="button" class="btn btn-md btn-dark"
+                                                                        href="altasphere.html">
+                                                                        <a class="navlink text-danger" href="altasphere.html">
+                                                                            Home
+                                                                        </a>
+                                                                    </button>
+                                                                </li>
+                                                                &nbsp;
+                                                                <li class="nav-item">
+                                                                    <button type="button" class="btn btn-md btn-dark"
+                                                                        href="aboutus.html">
+                                                                        <a class="navlink text-danger" href="aboutus.html">
+                                                                            About Us
+                                                                        </a>
+                                                                    </button>
+                                                                </li>
+                                                                &nbsp;
+                                                                <li class="nav-item">
+                                                                    <button type="button" class="btn btn-md btn-dark"
+                                                                            href="climate-form.component.html">
+                                                                        <a class="navlink text-danger" 
+                                                                            href="climate-form.component.html">
+                                                                            The Co-op
+                                                                        </a>
+                                                                    </button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </nav>
+                                                </div>
+                                            </tr>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="row custom-row">
+                            <div class="col-sm-6 md-8 custom-container jumbotron bc">
+                                <form class="form-horizontal" method="POST" onCheckout="return validateform1(this);" >
+                                    <fieldset>
+                                        <legend> Subscribe/Checkout: </legend>
+                                        <div class="form-group">
+                                            <!--To be  output thourgh pageformpipe1.js to the pageformpipe2.js here from
+                                                 the previous climate-form.component.html for input membername -->
+                                            <label for="billingName"> Billing Name: </label>
+                                            <h6> (If different than Member-Name) </h6>
+                                            <input type="text" id="billingName">
+                                        </div>
+                                        <div class="form-group">
+                                            <!--To be  output thourgh pageformpipe1.js to the pageformpipe2.js here
+                                                 from the previous climate-form.component.html for input ddselect -->
+                                            <label for="subscriptionstatus"> (Membership Selected) 
+                                                     <output from="cliform" href="climate-form.component.html"> 
+                                                         {[ddselect] (choice, value, print)} </output> 
+                                            </label>
+                                            <output from="ddselect" id="subscrptionstatus" display="ddselect">                                       </div>
+                                        <div class="form-group">
+                                            <label for="paymentchoice"> Payment Type: </label>
+                                                <select id="paymentchoice">
+                                                    <br/><br/>
+                                                    <option value="creditcard"> Credit-Card</option>
+                                                        <output> add dropdown-box for cc payment: [----] [----] [----] [----] </output>
+                                                    <option value="paypal"> Paypal</option>
+                                                        <ouput> add server-info for [paypal.module]</ouput>
+                                                </select>
+                                            <!-- Payment types need to have another drop down that allows for payment info to be input-->
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="totalcharge"> (Total due today: $ __.__ ) </label>
+                                            <br/>
+                                            <output type="number" id="totalcharge" placeholder="$0.00"> 
+                                               { ddselect +
+                                                donateoption = totalcharge; }
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" value="Checkout" class="btn btn-primary"
+                                                 href="#server-listed-address-for-payment-authentication">
+                                                <a class="text-white"> Check-Out</a>
+                                            </button>
+                                            &nbsp;
+                                            <button type="reset" class="btn btn-default" href="#">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </fieldset>
+                            </div>
+                            <br/>
+                            <div class="col custom-col">
+                                <div class="container customer-container">
+                                    <img src="helloearth.jpg">
+                                    <!--jQuery plugin for Rippling effect here-->
+                                </div>
+                            <br/>
+                            <div class="row custom-row">
+                                <div class="container custom-container">
+                                <h3 class="text-danger"> Tell a (Friend) about AltaSphere for <br/>
+                                     ~Sweet~ Extra Content Delivery! </h3>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="calign container custom-container font-weight-bold text-danger"> 
+                                &copy; A.Cox 8.15.19
+                        </div>
+</body>
